@@ -23,7 +23,7 @@ def get_named_linears(module):
 def get_blocks(model):
     if isinstance(model, LlamaForCausalLM):
         layers = model.model.layers
-    if isinstance(model, MistralForCausalLM):
+    elif isinstance(model, MistralForCausalLM):
         layers = model.model.layers
     elif isinstance(model, OPTForCausalLM):
         layers = model.model.decoder.layers
